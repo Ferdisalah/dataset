@@ -1,0 +1,32 @@
+BOOTSTRAP SAMPLING STABILITY FOR REVISED PAIRWISE FEATURE CLUSTERING
+============================================================================
+Input file: C:\Users\UNITECH\Downloads\train.csv
+Rows resampled: 171,202
+Features clustered: 31
+Feature pairs: 465
+Excluded feature: FLAG_MOBIL (near-constant)
+Bootstrap replicates: 100
+Random seed: 20261030
+Cluster counts: [4, 8]
+Binning settings: 5 and 10
+Sampling: N applicants drawn with replacement from N applicants.
+Quantile cut points and pair encodings fixed from the full sample.
+Missingness: pairwise-complete rows retained separately for each pair.
+Dissimilarity: D = 1 - AMI; linkage: average.
+Weighted contingency tables used to implement bootstrap multiplicities.
+Every full-sample pair AMI was checked against the source matrix before resampling.
+TARGET and applicant ID columns were not loaded.
+No applicant-level records were exported.
+Maximum bootstrap multiplicity for one row: 10
+Elapsed time: 60.96 minutes
+
+ARI summary (bootstrap partition vs full-sample partition):
+ bins  k  replicates  ARI_mean   ARI_sd  ARI_median  ARI_q025  ARI_q975  ARI_min  ARI_max
+    5  4         100  0.996902 0.006227         1.0  0.984511       1.0 0.984511      1.0
+    5  8         100  0.965508 0.042457         1.0  0.913769       1.0 0.913769      1.0
+   10  4         100  0.996747 0.006341         1.0  0.984511       1.0 0.984511      1.0
+   10  8         100  0.968796 0.046789         1.0  0.899340       1.0 0.899340      1.0
+
+Interpretation: ARI and co-clustering frequencies quantify stability under
+this fixed-encoding row bootstrap. They are not causal evidence and do
+not include uncertainty from recalculating quantile boundaries.
