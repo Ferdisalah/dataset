@@ -1,0 +1,87 @@
+OBSERVED-VALUE AMI AND MISSINGNESS DIAGNOSTICS
+=================================================================
+
+Input file: C:\Users\UNITECH\Downloads\train.csv
+Output directory: C:\Users\UNITECH\Desktop\GCI 2026\features\AMI_analysis\missingness_diagnostics
+Rows: 171,202
+Selected predictors: 32
+Unique predictor pairs: 496
+Minimum pair count: 500
+Numeric low-cardinality limit: 25
+Observed AMI bin settings: [5, 10]
+Estimator: scikit-learn adjusted_mutual_info_score
+AMI normalization: arithmetic mean
+Missingness AMI: binary indicators over all rows
+Observed AMI: pairwise-complete observations
+Missing values are not included as a category in observed-value AMI.
+DAYS_EMPLOYED=365243 is treated as a separate special category.
+Varying missingness indicators included: 9
+Pairwise complete-count range: 19120 to 171202
+
+Selected predictors:
+- NAME_CONTRACT_TYPE
+- CODE_GENDER
+- CNT_CHILDREN
+- AMT_INCOME_TOTAL
+- AMT_CREDIT
+- AMT_ANNUITY
+- AMT_GOODS_PRICE
+- NAME_INCOME_TYPE
+- NAME_EDUCATION_TYPE
+- NAME_FAMILY_STATUS
+- NAME_HOUSING_TYPE
+- REGION_POPULATION_RELATIVE
+- DAYS_BIRTH
+- DAYS_EMPLOYED
+- DAYS_REGISTRATION
+- DAYS_ID_PUBLISH
+- OWN_CAR_AGE
+- FLAG_MOBIL
+- FLAG_EMP_PHONE
+- FLAG_WORK_PHONE
+- OCCUPATION_TYPE
+- CNT_FAM_MEMBERS
+- REGION_RATING_CLIENT
+- ORGANIZATION_TYPE
+- EXT_SOURCE_1
+- EXT_SOURCE_2
+- EXT_SOURCE_3
+- DAYS_LAST_PHONE_CHANGE
+- AMT_REQ_CREDIT_BUREAU_HOUR
+- AMT_REQ_CREDIT_BUREAU_MON
+- AMT_REQ_CREDIT_BUREAU_QRT
+- AMT_REQ_CREDIT_BUREAU_YEAR
+
+Feature audit:
+NAME_CONTRACT_TYPE: missing=0, unique_observed=2, treatment=retain_as_nominal_category
+CODE_GENDER: missing=0, unique_observed=3, treatment=retain_as_nominal_category
+CNT_CHILDREN: missing=0, unique_observed=13, treatment=retain_as_discrete_numeric
+AMT_INCOME_TOTAL: missing=0, unique_observed=1641, treatment=quantile_discretize_pairwise
+AMT_CREDIT: missing=0, unique_observed=4796, treatment=quantile_discretize_pairwise
+AMT_ANNUITY: missing=0, unique_observed=12241, treatment=quantile_discretize_pairwise
+AMT_GOODS_PRICE: missing=0, unique_observed=904, treatment=quantile_discretize_pairwise
+NAME_INCOME_TYPE: missing=0, unique_observed=8, treatment=retain_as_nominal_category
+NAME_EDUCATION_TYPE: missing=0, unique_observed=5, treatment=retain_as_nominal_category
+NAME_FAMILY_STATUS: missing=0, unique_observed=6, treatment=retain_as_nominal_category
+NAME_HOUSING_TYPE: missing=0, unique_observed=6, treatment=retain_as_nominal_category
+REGION_POPULATION_RELATIVE: missing=0, unique_observed=81, treatment=quantile_discretize_pairwise
+DAYS_BIRTH: missing=0, unique_observed=17298, treatment=quantile_discretize_pairwise
+DAYS_EMPLOYED: missing=0, unique_observed=11178, treatment=quantile_discretize_pairwise
+DAYS_REGISTRATION: missing=0, unique_observed=14909, treatment=quantile_discretize_pairwise
+DAYS_ID_PUBLISH: missing=0, unique_observed=6077, treatment=quantile_discretize_pairwise
+OWN_CAR_AGE: missing=112992, unique_observed=54, treatment=quantile_discretize_pairwise
+FLAG_MOBIL: missing=0, unique_observed=2, treatment=retain_as_discrete_numeric
+FLAG_EMP_PHONE: missing=0, unique_observed=2, treatment=retain_as_discrete_numeric
+FLAG_WORK_PHONE: missing=0, unique_observed=2, treatment=retain_as_discrete_numeric
+OCCUPATION_TYPE: missing=0, unique_observed=19, treatment=retain_as_nominal_category
+CNT_FAM_MEMBERS: missing=2, unique_observed=15, treatment=retain_as_discrete_numeric
+REGION_RATING_CLIENT: missing=0, unique_observed=3, treatment=retain_as_discrete_numeric
+ORGANIZATION_TYPE: missing=0, unique_observed=58, treatment=retain_as_nominal_category
+EXT_SOURCE_1: missing=118928, unique_observed=49131, treatment=quantile_discretize_pairwise
+EXT_SOURCE_2: missing=369, unique_observed=90952, treatment=quantile_discretize_pairwise
+EXT_SOURCE_3: missing=54586, unique_observed=784, treatment=quantile_discretize_pairwise
+DAYS_LAST_PHONE_CHANGE: missing=0, unique_observed=3676, treatment=quantile_discretize_pairwise
+AMT_REQ_CREDIT_BUREAU_HOUR: missing=23116, unique_observed=5, treatment=retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_MON: missing=23116, unique_observed=21, treatment=retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_QRT: missing=23116, unique_observed=11, treatment=retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_YEAR: missing=23116, unique_observed=23, treatment=retain_as_discrete_numeric

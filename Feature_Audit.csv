@@ -1,0 +1,33 @@
+feature,dtype,row_count,missing_count,missing_fraction,observed_count,observed_unique_values,constant_observed_feature,is_numeric,most_common_observed_value,most_common_value_count,most_common_value_fraction_of_observed,days_employed_365243_count,recommended_treatment
+NAME_CONTRACT_TYPE,object,171202,0,0.0,171202,2,False,False,Cash loans,154988,0.9052931624630554,0,retain_as_nominal_category
+CODE_GENDER,object,171202,0,0.0,171202,3,False,False,F,112549,0.6574047032160839,0,retain_as_nominal_category
+CNT_CHILDREN,int64,171202,0,0.0,171202,13,False,True,0,119950,0.7006343383838974,0,retain_as_discrete_numeric
+AMT_INCOME_TOTAL,float64,171202,0,0.0,171202,1641,False,True,135000.0,19969,0.11663999252345184,0,quantile_discretize_pairwise
+AMT_CREDIT,float64,171202,0,0.0,171202,4796,False,True,450000.0,5355,0.031278840200464945,0,quantile_discretize_pairwise
+AMT_ANNUITY,float64,171202,0,0.0,171202,12241,False,True,9000.0,3520,0.020560507470707118,0,quantile_discretize_pairwise
+AMT_GOODS_PRICE,float64,171202,0,0.0,171202,904,False,True,450000.0,14400,0.08411116692562003,0,quantile_discretize_pairwise
+NAME_INCOME_TYPE,object,171202,0,0.0,171202,8,False,False,Working,88268,0.5155780890410159,0,retain_as_nominal_category
+NAME_EDUCATION_TYPE,object,171202,0,0.0,171202,5,False,False,Secondary / secondary special,121612,0.710342168899896,0,retain_as_nominal_category
+NAME_FAMILY_STATUS,object,171202,0,0.0,171202,6,False,False,Married,109323,0.6385614654034415,0,retain_as_nominal_category
+NAME_HOUSING_TYPE,object,171202,0,0.0,171202,6,False,False,House / apartment,151916,0.8873494468522564,0,retain_as_nominal_category
+REGION_POPULATION_RELATIVE,float64,171202,0,0.0,171202,81,False,True,0.035792,9079,0.05303092253595168,0,quantile_discretize_pairwise
+DAYS_BIRTH,int64,171202,0,0.0,171202,17298,False,True,-10020,27,0.00015770843798553754,0,quantile_discretize_pairwise
+DAYS_EMPLOYED,int64,171202,0,0.0,171202,11178,False,True,365243,30898,0.18047686358804219,30898,quantile_discretize_pairwise
+DAYS_REGISTRATION,float64,171202,0,0.0,171202,14909,False,True,-1.0,64,0.00037382740855831123,0,quantile_discretize_pairwise
+DAYS_ID_PUBLISH,int64,171202,0,0.0,171202,6077,False,True,-4256,103,0.0006016284856485321,0,quantile_discretize_pairwise
+OWN_CAR_AGE,float64,171202,112992,0.6599922898096985,58210,54,False,True,7.0,4074,0.06998797457481533,0,quantile_discretize_pairwise
+FLAG_MOBIL,int64,171202,0,0.0,171202,2,False,True,1,171201,0.9999941589467413,0,retain_as_discrete_numeric
+FLAG_EMP_PHONE,int64,171202,0,0.0,171202,2,False,True,1,140299,0.8194939311456642,0,retain_as_discrete_numeric
+FLAG_WORK_PHONE,int64,171202,0,0.0,171202,2,False,True,0,137009,0.8002768659244635,0,retain_as_discrete_numeric
+OCCUPATION_TYPE,object,171202,0,0.0,171202,19,False,False,Other,53745,0.3139274073901006,0,retain_as_nominal_category
+CNT_FAM_MEMBERS,float64,171202,2,1.1682106517447226e-05,171200,15,False,True,2.0,88165,0.514982476635514,0,retain_as_discrete_numeric
+REGION_RATING_CLIENT,int64,171202,0,0.0,171202,3,False,True,2,126402,0.7383208140091821,0,retain_as_discrete_numeric
+ORGANIZATION_TYPE,object,171202,0,0.0,171202,58,False,False,Business Entity Type 3,37943,0.22162708379575005,0,retain_as_nominal_category
+EXT_SOURCE_1,float64,171202,118928,0.6946647819534818,52274,49131,False,True,0.6443229064578035,4,7.651987603780082e-05,0,quantile_discretize_pairwise
+EXT_SOURCE_2,float64,171202,369,0.0021553486524690134,170833,90952,False,True,0.2858978721410488,410,0.0024000046829359667,0,quantile_discretize_pairwise
+EXT_SOURCE_3,float64,171202,54586,0.31883973318068715,116616,784,False,True,0.746300213050371,691,0.005925430472662413,0,quantile_discretize_pairwise
+DAYS_LAST_PHONE_CHANGE,float64,171202,0,0.0,171202,3676,False,True,0.0,20971,0.12249272788869289,0,quantile_discretize_pairwise
+AMT_REQ_CREDIT_BUREAU_HOUR,float64,171202,23116,0.13502178712865504,148086,5,False,True,0.0,147153,0.9936996069851303,0,retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_MON,float64,171202,23116,0.13502178712865504,148086,21,False,True,0.0,123733,0.8355482624961171,0,retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_QRT,float64,171202,23116,0.13502178712865504,148086,11,False,True,0.0,119813,0.8090771578677255,0,retain_as_discrete_numeric
+AMT_REQ_CREDIT_BUREAU_YEAR,float64,171202,23116,0.13502178712865504,148086,23,False,True,0.0,39868,0.26922193860324406,0,retain_as_discrete_numeric
