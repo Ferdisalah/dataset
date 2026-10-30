@@ -1,0 +1,6 @@
+test,observed_value,expectation,passed,note
+X_vs_X,1.0,1,True,Identical labels should have AMI 1.
+X_vs_relabelled_X,1.0,1,True,AMI is invariant to category names.
+Independent_features,-7.495599838147301e-05,near 0,True,Chance-adjusted finite-sample value may be slightly negative.
+Nonlinear_Y_equals_X_squared,0.8486620611316168,>0.20,True,Deterministic nonlinear dependence should be detected.
+Missing_value_encoding,5.0,all rows encoded incl. missing,True,Checks that missing observations become an explicit category/bin.
