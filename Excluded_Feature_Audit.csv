@@ -1,0 +1,2 @@
+feature,dtype,row_count,missing_count,missing_fraction,observed_count,observed_unique_values,constant_observed_feature,is_numeric,most_common_observed_value,most_common_value_count,most_common_value_fraction_of_observed,days_employed_365243_count,recommended_treatment
+FLAG_MOBIL,int64,171202,0,0.0,171202,2,False,True,1,171201,0.9999941589467412,0,retain_as_discrete_numeric

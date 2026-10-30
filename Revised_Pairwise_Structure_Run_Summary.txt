@@ -1,0 +1,44 @@
+REVISED PAIRWISE STRUCTURE ANALYSIS
+============================================================
+Input directory: C:\Users\UNITECH\Desktop\GCI 2026\features\AMI_analysis\missingness_diagnostics
+Output directory: C:\Users\UNITECH\Desktop\GCI 2026\features\AMI_analysis\revised_pairwise_structure
+Source: observed-value AMI matrices; missing values were excluded pairwise upstream.
+Excluded feature: FLAG_MOBIL (near-constant; undefined AMI pairings).
+Retained features: 31
+Retained pairwise comparisons: 465
+Dissimilarity: D = 1 - AMI (small negative AMI estimates are preserved).
+Linkage: average
+Ward linkage was not used because D is not established to be Euclidean.
+The matrices use pairwise-complete samples; pair supports may differ.
+The resulting clusters describe similarity in pairwise AMI profiles, not causal groups.
+
+5-bin vs 10-bin partition agreement (ARI):
+  k=2: ARI=1.000000
+  k=3: ARI=1.000000
+  k=4: ARI=1.000000
+  k=5: ARI=0.867743
+  k=6: ARI=0.345478
+  k=8: ARI=1.000000
+  k=10: ARI=1.000000
+
+Top 20 observed-value AMI pairs (ranked by 5-bin AMI):
+  AMT_CREDIT -- AMT_GOODS_PRICE: AMI5=0.696889; AMI10=0.636679
+  CNT_CHILDREN -- CNT_FAM_MEMBERS: AMI5=0.654192; AMI10=0.654192
+  NAME_INCOME_TYPE -- FLAG_EMP_PHONE: AMI5=0.571350; AMI10=0.571350
+  DAYS_EMPLOYED -- FLAG_EMP_PHONE: AMI5=0.416951; AMI10=0.333303
+  NAME_FAMILY_STATUS -- CNT_FAM_MEMBERS: AMI5=0.354340; AMI10=0.354340
+  NAME_INCOME_TYPE -- DAYS_EMPLOYED: AMI5=0.322816; AMI10=0.271548
+  AMT_CREDIT -- AMT_ANNUITY: AMI5=0.301241; AMI10=0.278952
+  AMT_ANNUITY -- AMT_GOODS_PRICE: AMI5=0.296878; AMI10=0.266378
+  FLAG_EMP_PHONE -- ORGANIZATION_TYPE: AMI5=0.284746; AMI10=0.284746
+  NAME_INCOME_TYPE -- ORGANIZATION_TYPE: AMI5=0.277454; AMI10=0.277454
+  DAYS_BIRTH -- FLAG_EMP_PHONE: AMI5=0.237224; AMI10=0.186660
+  REGION_POPULATION_RELATIVE -- REGION_RATING_CLIENT: AMI5=0.224224; AMI10=0.236049
+  OCCUPATION_TYPE -- ORGANIZATION_TYPE: AMI5=0.220890; AMI10=0.220890
+  DAYS_EMPLOYED -- ORGANIZATION_TYPE: AMI5=0.218553; AMI10=0.197043
+  FLAG_EMP_PHONE -- OCCUPATION_TYPE: AMI5=0.193459; AMI10=0.193459
+  DAYS_BIRTH -- DAYS_ID_PUBLISH: AMI5=0.185137; AMI10=0.219767
+  NAME_INCOME_TYPE -- DAYS_BIRTH: AMI5=0.177621; AMI10=0.149269
+  NAME_INCOME_TYPE -- OCCUPATION_TYPE: AMI5=0.176385; AMI10=0.176385
+  DAYS_BIRTH -- DAYS_EMPLOYED: AMI5=0.173971; AMI10=0.140825
+  DAYS_EMPLOYED -- OCCUPATION_TYPE: AMI5=0.136090; AMI10=0.120170
