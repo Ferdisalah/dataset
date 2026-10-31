@@ -1,0 +1,85 @@
+SYNTHETIC NETWORK RECOVERY WITH CATBOOST
+========================================================================
+Rows per synthetic repetition: 7000
+Synthetic repetitions: 3
+CatBoost threads per model: 4
+CatBoost iterations: 300
+Permutation repeats per predictor: 3
+Features: 12
+Directed candidate links per repetition: 132
+Known direct generating edges: 11
+
+INTERPRETATION WARNING
+The model creates source -> target links because source is used to predict target.
+These are predictive links, not causal edges. Descendants and indirect proxies
+can predict a target and receive importance even when they are not direct parents.
+The generating DAG is a diagnostic reference to expose this limitation.
+
+KNOWN DIRECT EDGES:
+  A -> B
+  B -> C
+  A -> D
+  B -> E
+  D -> E
+  A -> G
+  H -> G
+  C -> K
+  H -> K
+  A -> XOR
+  F -> XOR
+
+DIRECT-EDGE RANKING METRICS BY REPETITION:
+ repetition     seed  number_of_true_direct_edges  number_of_candidate_directed_edges  direct_edge_roc_auc  direct_edge_average_precision  precision_at_true_edge_count  recall_at_true_edge_count  mean_rank_of_true_parent_edges
+          1 20261031                           11                                 132             0.959805                       0.537879                      0.636364                   0.636364                        1.363636
+          2 20261032                           11                                 132             0.959805                       0.537879                      0.636364                   0.636364                        1.363636
+          3 20261033                           11                                 132             0.959805                       0.537879                      0.636364                   0.636364                        1.363636
+
+DIRECT-EDGE RANKING SUMMARY:
+                        metric  mean_across_repetitions  sd_across_repetitions  minimum  maximum
+           direct_edge_roc_auc                 0.959805                    0.0 0.959805 0.959805
+ direct_edge_average_precision                 0.537879                    0.0 0.537879 0.537879
+  precision_at_true_edge_count                 0.636364                    0.0 0.636364 0.636364
+     recall_at_true_edge_count                 0.636364                    0.0 0.636364 0.636364
+mean_rank_of_true_parent_edges                 1.363636                    0.0 1.363636 1.363636
+
+TARGET PREDICTABILITY:
+ repetition     seed target_feature target_type  n_train  n_test  number_of_input_features categorical_input_features  baseline_mse  baseline_rmse  baseline_r2  baseline_logloss  baseline_accuracy  baseline_balanced_accuracy
+          1 20261031              A   numerical     4900    2100                        11            H | K | XOR | L      0.066284       0.257457     0.933883               NaN                NaN                         NaN
+          1 20261031              B   numerical     4900    2100                        11            H | K | XOR | L      0.055774       0.236164     0.946594               NaN                NaN                         NaN
+          1 20261031              C   numerical     4900    2100                        11            H | K | XOR | L      0.038063       0.195097     0.928587               NaN                NaN                         NaN
+          1 20261031              D   numerical     4900    2100                        11            H | K | XOR | L      0.136717       0.369753     0.844663               NaN                NaN                         NaN
+          1 20261031              E   numerical     4900    2100                        11            H | K | XOR | L      0.208546       0.456669     0.482810               NaN                NaN                         NaN
+          1 20261031              F   numerical     4900    2100                        11            H | K | XOR | L      0.386710       0.621860     0.625598               NaN                NaN                         NaN
+          1 20261031              G   numerical     4900    2100                        11            H | K | XOR | L      0.195604       0.442272     0.897085               NaN                NaN                         NaN
+          1 20261031              N   numerical     4900    2100                        11            H | K | XOR | L      1.023125       1.011496    -0.010284               NaN                NaN                         NaN
+          1 20261031              H categorical     4900    2100                        11                K | XOR | L           NaN            NaN          NaN          0.232460           0.916190                    0.915991
+          1 20261031              K categorical     4900    2100                        11                H | XOR | L           NaN            NaN          NaN          0.309615           0.874286                    0.874159
+          1 20261031            XOR categorical     4900    2100                        11                  H | K | L           NaN            NaN          NaN          0.008937           0.997143                    0.997124
+          1 20261031              L categorical     4900    2100                        11                H | K | XOR           NaN            NaN          NaN          1.109055           0.329048                    0.328935
+          2 20261032              A   numerical     4900    2100                        11            H | K | XOR | L      0.065453       0.255837     0.935425               NaN                NaN                         NaN
+          2 20261032              B   numerical     4900    2100                        11            H | K | XOR | L      0.057774       0.240362     0.946086               NaN                NaN                         NaN
+          2 20261032              C   numerical     4900    2100                        11            H | K | XOR | L      0.035772       0.189135     0.931206               NaN                NaN                         NaN
+          2 20261032              D   numerical     4900    2100                        11            H | K | XOR | L      0.142126       0.376996     0.846953               NaN                NaN                         NaN
+          2 20261032              E   numerical     4900    2100                        11            H | K | XOR | L      0.211634       0.460037     0.482792               NaN                NaN                         NaN
+          2 20261032              F   numerical     4900    2100                        11            H | K | XOR | L      0.342793       0.585485     0.635547               NaN                NaN                         NaN
+          2 20261032              G   numerical     4900    2100                        11            H | K | XOR | L      0.205799       0.453651     0.891028               NaN                NaN                         NaN
+          2 20261032              N   numerical     4900    2100                        11            H | K | XOR | L      1.040742       1.020167    -0.014411               NaN                NaN                         NaN
+          2 20261032              H categorical     4900    2100                        11                K | XOR | L           NaN            NaN          NaN          0.254173           0.904286                    0.904114
+          2 20261032              K categorical     4900    2100                        11                H | XOR | L           NaN            NaN          NaN          0.320520           0.870000                    0.868816
+          2 20261032            XOR categorical     4900    2100                        11                  H | K | L           NaN            NaN          NaN          0.009756           0.996190                    0.996170
+          2 20261032              L categorical     4900    2100                        11                H | K | XOR           NaN            NaN          NaN          1.108107           0.342857                    0.339790
+          3 20261033              A   numerical     4900    2100                        11            H | K | XOR | L      0.070442       0.265408     0.931844               NaN                NaN                         NaN
+          3 20261033              B   numerical     4900    2100                        11            H | K | XOR | L      0.058713       0.242308     0.944893               NaN                NaN                         NaN
+          3 20261033              C   numerical     4900    2100                        11            H | K | XOR | L      0.037833       0.194507     0.928011               NaN                NaN                         NaN
+          3 20261033              D   numerical     4900    2100                        11            H | K | XOR | L      0.148476       0.385326     0.846186               NaN                NaN                         NaN
+          3 20261033              E   numerical     4900    2100                        11            H | K | XOR | L      0.217207       0.466054     0.480617               NaN                NaN                         NaN
+          3 20261033              F   numerical     4900    2100                        11            H | K | XOR | L      0.365607       0.604654     0.622339               NaN                NaN                         NaN
+          3 20261033              G   numerical     4900    2100                        11            H | K | XOR | L      0.221817       0.470975     0.883215               NaN                NaN                         NaN
+          3 20261033              N   numerical     4900    2100                        11            H | K | XOR | L      0.997891       0.998945    -0.014812               NaN                NaN                         NaN
+          3 20261033              H categorical     4900    2100                        11                K | XOR | L           NaN            NaN          NaN          0.253741           0.911429                    0.909891
+          3 20261033              K categorical     4900    2100                        11                H | XOR | L           NaN            NaN          NaN          0.313793           0.870000                    0.870373
+          3 20261033            XOR categorical     4900    2100                        11                  H | K | L           NaN            NaN          NaN          0.007766           0.997619                    0.997624
+          3 20261033              L categorical     4900    2100                        11                H | K | XOR           NaN            NaN          NaN          1.111611           0.317619                    0.317830
+
+Elapsed time: 2.3 minutes
+No Home Credit data or applicant-level records were read or exported.

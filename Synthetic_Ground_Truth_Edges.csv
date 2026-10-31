@@ -1,0 +1,12 @@
+source_feature,target_feature,is_true_direct_parent_edge
+A,B,True
+A,D,True
+A,G,True
+A,XOR,True
+B,C,True
+B,E,True
+C,K,True
+D,E,True
+F,XOR,True
+H,G,True
+H,K,True
