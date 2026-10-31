@@ -1,0 +1,4 @@
+repetition,seed,n_targets_with_true_parents,n_true_direct_edges,macro_roc_auc_across_parented_targets,macro_average_precision_across_parented_targets,macro_oracle_k_precision,macro_oracle_k_recall,micro_oracle_k_precision,micro_oracle_k_recall,micro_oracle_k_f1,mean_rank_of_true_parent_edges,mean_reciprocal_rank_of_true_parent_edges,fraction_true_parent_edges_ranked_first,fraction_true_parent_edges_ranked_within_top_2
+1,20261031,7,11,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.3636363636363635,0.8181818181818182,0.6363636363636364,1.0
+2,20261032,7,11,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.3636363636363635,0.8181818181818182,0.6363636363636364,1.0
+3,20261033,7,11,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.3636363636363635,0.8181818181818182,0.6363636363636364,1.0
