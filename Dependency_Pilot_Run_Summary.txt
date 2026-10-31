@@ -1,0 +1,21 @@
+HOME CREDIT STAGE II-B DEPENDENCY PILOT
+============================================================================
+Outer split: repetition 1, fold 1
+Rows: 171,202; training=136,961; validation=34,241
+Dependency targets: ['EXT_SOURCE_2', 'AMT_CREDIT', 'ORGANIZATION_TYPE']
+Inner CV: 2-fold KFold using predictors only
+Numeric targets: CatBoost 200 iterations, depth=6, lr=0.05
+Categorical targets: LightGBM 200 estimators, leaves=31, max_depth=6, threads=2
+Per-target checkpoints: enabled
+
+   target_feature                             representation             partition  n_observed         rmse          mae       r2  missing_rate    brier  roc_auc   n_rows  mean_surprisal_nats  frequency_baseline_mean_surprisal_nats  surprisal_improvement_vs_frequency_nats  top1_accuracy  frequency_baseline_top1_accuracy  unknown_category_rate
+     EXT_SOURCE_2                           numeric_residual outer_train_inner_oof    136663.0     0.169566     0.135316 0.214638           NaN      NaN      NaN      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+     EXT_SOURCE_2                           numeric_residual      outer_validation     34170.0     0.168836     0.134593 0.218672           NaN      NaN      NaN      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+     EXT_SOURCE_2                      missingness_surprisal outer_train_inner_oof         NaN          NaN          NaN      NaN      0.002176 0.002170 0.628487      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+     EXT_SOURCE_2                      missingness_surprisal      outer_validation         NaN          NaN          NaN      NaN      0.002074 0.002067 0.710025      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+       AMT_CREDIT                           numeric_residual outer_train_inner_oof    136961.0 53227.624144 36527.988805 0.982525           NaN      NaN      NaN      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+       AMT_CREDIT                           numeric_residual      outer_validation     34241.0 51508.235466 36183.569590 0.983701           NaN      NaN      NaN      NaN                  NaN                                     NaN                                      NaN            NaN                               NaN                    NaN
+ORGANIZATION_TYPE categorical_conditional_surprisal_lightgbm outer_train_inner_oof         NaN          NaN          NaN      NaN           NaN      NaN      NaN 136961.0             1.960219                                2.846819                                 0.886600       0.476099                          0.220932               0.000037
+ORGANIZATION_TYPE categorical_conditional_surprisal_lightgbm      outer_validation         NaN          NaN          NaN      NaN           NaN      NaN      NaN  34241.0             1.891661                                2.822382                                 0.930721       0.488829                          0.224409               0.000000
+
+This is a pipeline/runtime pilot, not a final classification-lift experiment.

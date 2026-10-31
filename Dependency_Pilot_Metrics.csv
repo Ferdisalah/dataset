@@ -1,0 +1,9 @@
+target_feature,representation,partition,n_observed,rmse,mae,r2,missing_rate,brier,roc_auc,n_rows,mean_surprisal_nats,frequency_baseline_mean_surprisal_nats,surprisal_improvement_vs_frequency_nats,top1_accuracy,frequency_baseline_top1_accuracy,unknown_category_rate
+EXT_SOURCE_2,numeric_residual,outer_train_inner_oof,136663.0,0.16956555509760185,0.13531633396790324,0.2146376658422019,,,,,,,,,,
+EXT_SOURCE_2,numeric_residual,outer_validation,34170.0,0.16883610099362253,0.1345933194449612,0.21867223809362046,,,,,,,,,,
+EXT_SOURCE_2,missingness_surprisal,outer_train_inner_oof,,,,,0.0021758018706055007,0.002170419224136567,0.628487262082543,,,,,,,
+EXT_SOURCE_2,missingness_surprisal,outer_validation,,,,,0.002073537571916708,0.002067460537843358,0.7100248550124275,,,,,,,
+AMT_CREDIT,numeric_residual,outer_train_inner_oof,136961.0,53227.62414385589,36527.988805057525,0.9825253126271214,,,,,,,,,,
+AMT_CREDIT,numeric_residual,outer_validation,34241.0,51508.23546573939,36183.569589943574,0.9837010137144719,,,,,,,,,,
+ORGANIZATION_TYPE,categorical_conditional_surprisal_lightgbm,outer_train_inner_oof,,,,,,,,136961.0,1.960219378918791,2.846819328617703,0.8865999496989119,0.47609903549185534,0.22093150604916728,3.650674279539431e-05
+ORGANIZATION_TYPE,categorical_conditional_surprisal_lightgbm,outer_validation,,,,,,,,34241.0,1.8916609317671795,2.8223820836525477,0.9307211518853682,0.4888291813907304,0.22440933383954909,0.0
