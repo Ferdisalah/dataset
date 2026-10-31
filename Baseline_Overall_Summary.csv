@@ -1,0 +1,2 @@
+n_rows,n_predictors,n_numerical,n_categorical,n_folds,mean_fold_roc_auc,sd_fold_roc_auc,min_fold_roc_auc,max_fold_roc_auc,mean_fold_average_precision,sd_fold_average_precision,mean_repetition_pooled_oof_auc,sd_repetition_pooled_oof_auc,positive_rate
+171202,31,23,8,15,0.7531795012024698,0.003312901928898211,0.7440320745991135,0.7578982603886837,0.23533059727840336,0.003977871745465172,0.753172883234377,0.0003129973981728134,0.08072919708881905
