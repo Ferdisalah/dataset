@@ -1,0 +1,32 @@
+{
+  "input_file": "/content/drive/MyDrive/Competition/output/CATBOOST_LGBM_XGBOOST_LOCAL_500_NEIGHBOR_INTERACTION/COMPETITION_SUBMISSION/CATBOOST_CREDIT_TERM_PAIRED_EXPERIMENT_20261115_064641/SHAP_OLD_NEW_GLOBAL_20261115_091735/TN_FP_EXT_SOURCE_SIGN_ANALYSIS_20261115_103510/CUSTOMER_LEVEL_TN_FP_EXT_SOURCE_SIGN_COHORTS.csv",
+  "output_directory": "/content/drive/MyDrive/Competition/output/CATBOOST_LGBM_XGBOOST_LOCAL_500_NEIGHBOR_INTERACTION/COMPETITION_SUBMISSION/CATBOOST_CREDIT_TERM_PAIRED_EXPERIMENT_20261115_064641/SHAP_OLD_NEW_GLOBAL_20261115_091735/TN_FP_EXT_SOURCE_SIGN_ANALYSIS_20261115_103510/DETAILED_STATISTICAL_ANALYSIS",
+  "rows": 157381,
+  "target_values": [
+    0
+  ],
+  "prediction_group_counts": {
+    "TRUE_NEGATIVE": 157036,
+    "FALSE_POSITIVE": 345
+  },
+  "cohort_counts": {
+    "ES2_NEGATIVE__ES3_POSITIVE": 48641,
+    "ES2_POSITIVE__ES3_POSITIVE": 42249,
+    "ES2_NEGATIVE__ES3_NEGATIVE": 38975,
+    "ES2_POSITIVE__ES3_NEGATIVE": 27516
+  },
+  "classification_threshold": 0.5,
+  "cohort_sign_source": "NEW model SHAP values",
+  "tests": {
+    "within_TN": "Kruskal-Wallis and pairwise Mann-Whitney U with Holm adjustment",
+    "FP_vs_TN": "Mann-Whitney U within same sign cohort; small FP groups flagged",
+    "missingness": "Fisher exact test",
+    "correlation": "Spearman with BH q-values"
+  },
+  "caveats": [
+    "These are observational cohort comparisons, not causal effects.",
+    "FP subcohorts of size 4 and 12 are descriptive only.",
+    "OLD models were trained on GPU and NEW models on CPU; OLD-vs-NEW SHAP deltas are exploratory.",
+    "SHAP values are on CatBoost raw-score scale; positive values push toward TARGET=1."
+  ]
+}
